@@ -69,7 +69,7 @@ function eliminateTeam(a) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(a) {
-  if (a.length%2===0)
+  if (isArrayLengthEven(a))
   return (a.slice(a.length/2));
   else
   return (a.slice(0,0));
@@ -90,11 +90,20 @@ function secondHalfOfArrayIfItIsEven(a) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(s) {
-   if (s.endsWith('!'))
-   return s.slice(0,s.indexOf('!')+1 ) 
+  // without while
+  //  if (s.endsWith('!'))
+  //  return s.slice(0,s.indexOf('!')+1 ) 
+  if (s.endsWith('!')){
+      let i=0;  
+       while (s[i]!=='!'){      
+            i++;
+       }
+       x=s.slice(0,i+1)
+       return x;
+  }
+  else    
+  return s;
 }
-z="Gotta Get Tay-Tay Schwifty!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-console.log(youGottaCalmDown(z));
 
 module.exports = {
   isArrayLengthOdd,
