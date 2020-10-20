@@ -90,9 +90,11 @@ function secondHalfOfArrayIfItIsEven(a) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(s) {
-  //if (s.endsWith(!))
- // return s.slice(0, ) 
+   if (s.endsWith('!'))
+   return s.slice(0,s.indexOf('!')+1 ) 
 }
+z="Gotta Get Tay-Tay Schwifty!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+console.log(youGottaCalmDown(z));
 
 module.exports = {
   isArrayLengthOdd,
